@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y ca-certificates curl libpcre3 librecode
 # phpize deps
 RUN apt-get update && apt-get install -y autoconf file g++ gcc libc-dev make pkg-config re2c --no-install-recommends && rm -r /var/lib/apt/lists/*
 
-ENV PHP_INI_DIR /etc/php7
+ENV PHP_INI_DIR /etc/php7/cli
 RUN mkdir -p $PHP_INI_DIR/conf.d
 
 ENV PHP_VERSION 7.0.0RC1
